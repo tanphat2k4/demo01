@@ -37,7 +37,7 @@ class WellcomeViewController: UIViewController {
 // button
    
     @IBAction func loginButton(_ sender: Any) {
-        
+        print("Hi")
     }
     
     @IBAction func signUpButton(_ sender: Any) {
