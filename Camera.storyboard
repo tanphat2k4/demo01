@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera-->
+        <scene sceneID="y5r-XV-Rpg">
+            <objects>
+                <viewController id="yo1-1D-tkO" customClass="CameraViewController" customModule="Demo1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gdY-Qj-Sna"/>
+                        <viewControllerLayoutGuide type="bottom" id="HQD-He-4Cb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VVH-zX-DdW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vaq-Do-ymx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_image" translatesAutoresizingMaskIntoConstraints="NO" id="XNi-yd-lgl">
+                                        <rect key="frame" x="8" y="10" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Y2u-TE-Zfd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UfU-mg-iAG">
+                                        <rect key="frame" x="96" y="10" width="271" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UfU-mg-iAG" firstAttribute="trailing" secondItem="Vaq-Do-ymx" secondAttribute="trailingMargin" id="22A-XW-eSO"/>
+                                    <constraint firstAttribute="bottom" secondItem="XNi-yd-lgl" secondAttribute="bottom" constant="10" id="BCy-qZ-YqV"/>
+                                    <constraint firstItem="XNi-yd-lgl" firstAttribute="leading" secondItem="Vaq-Do-ymx" secondAttribute="leading" constant="8" id="LSf-6b-Ffi"/>
+                                    <constraint firstItem="UfU-mg-iAG" firstAttribute="leading" secondItem="XNi-yd-lgl" secondAttribute="trailing" constant="8" symbolic="YES" id="Oit-Zl-D8i"/>
+                                    <constraint firstItem="UfU-mg-iAG" firstAttribute="top" secondItem="Vaq-Do-ymx" secondAttribute="top" constant="10" id="SL4-Ob-PSg"/>
+                                    <constraint firstItem="XNi-yd-lgl" firstAttribute="top" secondItem="Vaq-Do-ymx" secondAttribute="top" constant="10" id="boM-dK-hqS"/>
+                                    <constraint firstAttribute="height" constant="100" id="cDE-XU-0eA"/>
+                                    <constraint firstAttribute="bottom" secondItem="UfU-mg-iAG" secondAttribute="bottom" constant="10" id="v7P-iH-dAD"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDa-sH-CQ5">
+                                <rect key="frame" x="8" y="580" width="359" height="30"/>
+                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="upp-BF-XGj"/>
+                                </constraints>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButton_Touchupinside:" destination="yo1-1D-tkO" eventType="touchUpInside" id="YSX-mQ-89e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZDa-sH-CQ5" firstAttribute="leading" secondItem="VVH-zX-DdW" secondAttribute="leading" constant="8" id="287-t5-5zP"/>
+                            <constraint firstItem="Vaq-Do-ymx" firstAttribute="leading" secondItem="VVH-zX-DdW" secondAttribute="leading" id="2vd-me-y2K"/>
+                            <constraint firstAttribute="trailing" secondItem="Vaq-Do-ymx" secondAttribute="trailing" id="dGg-T8-3xc"/>
+                            <constraint firstItem="ZDa-sH-CQ5" firstAttribute="trailing" secondItem="VVH-zX-DdW" secondAttribute="trailingMargin" constant="8" id="lfT-1D-JFL"/>
+                            <constraint firstItem="HQD-He-4Cb" firstAttribute="top" secondItem="ZDa-sH-CQ5" secondAttribute="bottom" constant="8" id="mhT-Tn-g6Z"/>
+                            <constraint firstItem="Vaq-Do-ymx" firstAttribute="top" secondItem="gdY-Qj-Sna" secondAttribute="bottom" id="t69-EQ-rlJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Camera" id="vfy-rs-B8w">
+                        <barButtonItem key="leftBarButtonItem" title="Remove" id="XeP-N9-s2v">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="remove_Touchupinside:" destination="yo1-1D-tkO" id="Prn-ha-YXf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cationTextView" destination="UfU-mg-iAG" id="gbn-5q-kj9"/>
+                        <outlet property="photo" destination="XNi-yd-lgl" id="zcG-HD-COk"/>
+                        <outlet property="removeButton" destination="XeP-N9-s2v" id="10C-c9-wWB"/>
+                        <outlet property="shareButton" destination="ZDa-sH-CQ5" id="hn2-RI-t7R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qb7-GF-f7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.8" y="617.54122938530736"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P9p-ME-7QF">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationCamera" automaticallyAdjustsScrollViewInsets="NO" id="4vH-hb-lcS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Photo" selectedImage="Photo" id="0t8-tg-cCa">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PWT-uL-2qG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yo1-1D-tkO" kind="relationship" relationship="rootViewController" id="fHd-qO-r1z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpM-gY-KCC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874" y="-161"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Photo" width="25" height="25"/>
+        <image name="placeholder_image" width="640" height="480"/>
+    </resources>
+</document>
